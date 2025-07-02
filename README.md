@@ -1,17 +1,24 @@
-# VirtualQ
+# QVista
 
-**VirtualQ** is a modern online queue management system that enables users to join, manage, and monitor queues virtually. It helps businesses reduce physical crowding and wait times by providing real-time queue updates.
+**QVista** is a smart and user-friendly digital queue management system designed to streamline check-ins and reduce wait times. Users can effortlessly join the queue, while admins manage flow through real-time controls and status updates. With its clean interface and seamless experience.
+
+
 
 ## Features
 
 - **Join Queue**: Users can join a live queue virtually with a single click.
-- **Live Updates**: Get real-time updates on your position in the queue.
-- **Admin Panel**: Admins can create queues, manage users, and control flow.
-- **Responsive UI**: Mobile-first design for smooth experience across devices.
+- **Queue Display**: Displays the current queue status in real time for users, ensuring they stay informed of their position.
+- **Admin Panel**: Admin can view the current queue and take actions such as:
+  - **Call Next**: Progress the queue by calling the next user.
+  - **Mark as Served**: Indicate that a user has been served.
+  - **Mark as Not Arrived**: Move absent users to a separate list for no-shows.
+- **No-Show Management**: Users marked as "Not Arrived" are moved to a separate list where they can:
+  - Choose to **rejoin the queue**, or
+  - **Exit** the process entirely.
 
 ## Tech Stack
 
-- **Frontend**: React.js, Tailwind CSS
+- **Frontend**: React.js
 - **Backend**: Node.js, Express
 - **Database**: MongoDB
 - **Hosting**: Vercel (Frontend), Render (Backend)
