@@ -1,0 +1,43 @@
+/* global.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+/* Add this to make body grow as tall as content */
+body {
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  color: #003366;
+  overflow-x: hidden;
+}
+
+/* Pseudo-element that holds the full-page gradient background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #6633ee 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Button styles */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}

@@ -1,0 +1,211 @@
+/* ===== Reset & Base Styles ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background-color: #fefefe;
+  background-image: 
+    linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+    linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+  background-size: 6rem 4rem;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle 500px at 50% 200px, #C9EBFF, transparent);
+  z-index: -1;
+}
+
+/* ===== App Container ===== */
+.App {
+  min-height: 100vh;
+  padding: 80px 20px 40px; /* Add top padding to avoid overlap with navbar */
+  box-sizing: border-box;
+}
+
+/* ===== Title ===== */
+.App h1 {
+  text-align: center;
+  margin: 10px 0 30px;
+  color: #003366;
+  font-size: 28px;
+}
+
+/* ===== Navigation (old nav-links style - optional if using Navbar.js) ===== */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.nav-links a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #555;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a.active {
+  background-color: #007bff;
+  color: #000000;
+}
+.nav-links a:hover {
+  background-color: #e2e6ea;
+  color: black;
+}
+
+/* ===== Content Section (applied to page body containers) ===== */
+.content {
+  padding: 20px;
+  color: #003366;
+}
+
+/* ===== Section Cards (optional block styling) ===== */
+section {
+  background: transparent; /* removed white box */
+  border: none;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+section:empty {
+  display: none !important;
+}
+
+/* ===== Input Fields ===== */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  background-color: #007bff;
+  color: #fff;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===== Toast Container Fix ===== */
+.Toastify__toast-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important;
+  width: auto !important;
+  pointer-events: none;
+}
+.Toastify__toast {
+  pointer-events: all;
+  font-size: 0.95rem;
+}
+
+/* ===== Navbar Styles ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff, #b4bceb);
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-title {
+  font-size: 22px;
+  font-weight: 700;
+  /* font-style: italic; */
+  color: #27214f;
+}
+
+.navbar-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #e6f2ff;
+  color: #000000;
+}
+
+.navbar-links .active {
+  color: #ffffff;
+  background-color: #007acc;
+}
+/* ===== Hamburger Menu ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+/* ===== Responsive Navbar ===== */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links a {
+    margin: 10px 0;
+  }
+}
