@@ -30,13 +30,13 @@
 ## Preview
 
 ### Home Page
-![Homepage](public/HomePage.png)
+![Join Queue](public/JoinQueue.png)
 
 ### Queue Join Page
-![Join Page](public/JoinQueue.png)
+![Admin Panel](public/AdminPanel.png)
 
 ### Admin Dashboard
-![Admin Dashboard](public/AdminPage.png)
+![Queue Display](public/QueueDisplay.png)
 
 ## Setup Instructions
 
