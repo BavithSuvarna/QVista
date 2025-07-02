@@ -29,13 +29,10 @@
 
 ## Preview
 
-### Home Page
 ![Join Queue](public/JoinQueue.png)
 
-### Queue Join Page
 ![Admin Panel](public/AdminPanel.png)
 
-### Admin Dashboard
 ![Queue Display](public/QueueDisplay.png)
 
 ## Setup Instructions
