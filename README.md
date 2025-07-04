@@ -61,7 +61,7 @@
      Start the backend server:
      ```bash
      cd server
-     npm start
+     node server.js
      ```
      Start the frontend app:
      ```bash
