@@ -20,7 +20,7 @@
 
 - **Frontend**: React, HTML, CSS, JavaScript
 - **Backend**: Node.js with Express
-- **Database**: MongoDB
+- **Database**: MongoDB with Mongoose for database interaction
 - **Hosting**: Vercel (Frontend), Render (Backend)
 
 ## Live Demo
